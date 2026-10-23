@@ -2,221 +2,105 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Madina Find - Le marché Madina à portée de main</title>
+<title>Madina Find</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,system-ui;background:#f6fbf7;color:#0a2e1f;padding-bottom:85px}
-.wrap{max-width:1250px;margin:auto;padding:14px}
-.h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:10px 0}
-.steps{margin:14px 0;background:#eef6ee;border:1px solid #c8e6c9;border-radius:16px;padding:12px;display:flex;justify-content:space-between;gap:8px}
-.step{flex:1;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;line-height:1.2;border-right:1px solid #d0e0d0;padding-right:6px}
-.step:last-child{border:none}
-.ic{width:36px;height:36px;background:#0a4a2d;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
-.search{width:100%;padding:14px;border-radius:12px;border:2px solid #0a5a2d;margin:12px 0;font-size:15px}
-.hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:16px}
-@media(max-width:900px){.hero{grid-template-columns:1fr}}
-.green{background:linear-gradient(180deg,#0e7a3a,#0a4a2d);border-radius:20px;padding:18px;color:#fff}
-.whitebox{background:#fff;border-radius:16px;padding:12px;color:#000;border:3px solid #ffda33;margin-top:12px}
-.right{background:#f0f8f1;border:1px solid #d0e8d2;border-radius:20px;padding:16px}
-.prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
-.prod{background:#fff;border-radius:12px;padding:8px;border:1px solid #e0e0e0;text-align:center;font-size:13px}
-.prod b{color:#0a5a2d}
-.footer{background:linear-gradient(90deg,#0a3d23,#0d6a33);color:#fff;padding:18px;border-radius:18px;margin-top:18px;text-align:center}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;padding:6px 0;display:flex;justify-content:space-around;z-index:100}
-.bnav{flex:1;text-align:center;text-decoration:none;color:#888;font-size:11px;font-weight:600;display:flex;flex-direction:column;align-items:center}
-.bnav.active{color:#0a5a2d}
+*{box-sizing:border-box;font-family:system-ui}body{margin:0;background:#f2f7f3;padding:8px 8px 110px}
+.card{background:#fff;border-radius:22px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-top:10px}
+.top{display:flex;gap:12px;align-items:center}
+.logo{font-weight:900;font-size:36px;line-height:.85}.logo .a{color:#0a3d1f}.logo .b{color:#ff7a00}
+.hero{display:flex;gap:12px;align-items:center}
+.hero img{width:74px;height:74px;border-radius:18px;background:#0a4d26}
+.steps{display:flex;gap:8px;overflow:auto;margin-top:10px}.steps::-webkit-scrollbar{display:none}
+.step{min-width:140px;background:#fff;border-radius:18px;padding:8px 10px;display:flex;gap:8px;align-items:center;border:1px solid #eee}
+.step i{width:34px;height:34px;border-radius:50%;background:#e8f2eb;display:grid;place-items:center}
+.search{margin-top:10px;background:#fff;border-radius:14px;padding:11px;border:1px solid #ddd;display:flex;gap:8px}
+.search input{border:0;outline:0;width:100%}
+.green{margin-top:12px;background:linear-gradient(135deg,#137a3a,#0a4d26);border-radius:26px;padding:16px;color:#fff}
+.whitebox{margin-top:12px;background:#fff;border-radius:18px;padding:12px;border:3px solid #ffeb7a;color:#111}
+.langbox{background:#fff;border-radius:18px;padding:12px;margin-top:12px;border:2px dashed #0a4d26}
+.lang-btn{padding:7px 14px;border-radius:20px;border:2px solid #0a4d26;background:#e6f5e6;font-weight:800;font-size:12px}
+.lang-btn.active{background:#ff7a00;color:#fff;border-color:#ff7a00}
+.vocal{width:100%;background:#ff6a00;color:#fff;border:0;border-radius:16px;padding:12px;font-weight:900;margin-top:10px}
+.nav{position:fixed;left:8px;right:8px;bottom:8px;background:#fff;border-radius:22px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;box-shadow:0 8px 20px rgba(0,0,0,.15);padding:8px 0;text-align:center}
+.nav span{font-size:10px;font-weight:700;display:block}.nav b{font-size:18px}
+.slogan{background:#fff;border:3px solid #0a4d26;border-radius:22px;padding:18px;margin-top:14px;text-align:center}
 </style>
 </head>
 <body>
-<div class="wrap">
-<div class="h">
-<div style="display:flex;gap:12px;align-items:center">
-<svg width="110" height="80" viewBox="0 0 220 160"><path d="M20 140 L20 20 L55 20 L110 75 L165 20 L200 20 L200 140 L165 140 L165 60 L110 115 L55 60 L55 140 Z" fill="#0a5a2d"/></svg>
-<div><h1 style="font-size:36px;line-height:.9">Madina <span style="color:#ff7a00">Find</span></h1><small><b>Trouvez • Comparez • Achetez</b><br>au Marché Madina</small></div>
+
+<div class="card top">
+<div class="logo"><div class="a">Madina</div><div class="b">Find</div></div>
+<div><b>Madina Find</b><br><small>Trouvez • Comparez • Achetez<br>au Marché Madina</small></div>
 </div>
-<div style="text-align:right"><h3 style="color:#0a3d23;font-size:16px">Le marché Madina<br><span style="color:#ff7a00">à portée de main !</span></h3><p style="font-size:13px">Des produits, des prix,<br>des vendeurs de confiance.<br><b>📞 624 20 65 87</b></p></div>
+
+<div class="card hero">
+<img src="logo.jpg" onerror="this.src='https://i.imgur.com/8Km9tLL.png'">
+<div><h3 style="margin:0">Le marché Madina<br><span style="color:#ff8a1f">à portée de main !</span></h3><p style="margin:4px 0 0;font-size:11px;color:#5a6f65">Des produits, des prix,<br>des vendeurs de confiance.</p></div>
 </div>
 
 <div class="steps">
-<div class="step"><div class="ic">🔍</div>Recherchez<br><small>un produit</small></div>
-<div class="step"><div class="ic">🏷️</div>Comparez<br><small>les prix</small></div>
-<div class="step"><div class="ic">📍</div>Trouvez<br><small>le vendeur</small></div>
-<div class="step"><div class="ic">🛡️</div>Achetez<br><small>en confiance</small></div>
+<div class="step"><i>🔍</i><div><b style="font-size:11px">Recherchez</b><br><small style="font-size:10px">un produit</small></div></div>
+<div class="step"><i>🏷️</i><div><b style="font-size:11px">Comparez</b><br><small style="font-size:10px">les prix</small></div></div>
+<div class="step"><i>📍</i><div><b style="font-size:11px">Trouvez</b><br><small style="font-size:10px">le vendeur</small></div></div>
+<div class="step"><i>🛡️</i><div><b style="font-size:11px">Achetez</b><br><small style="font-size:10px">en sécurité</small></div></div>
 </div>
 
-<a href="https://wa.me/224624206587?text=Salam%20Madina%20Find%20!%20Je%20veux%20commander%20depuis%20le%20site" style="display:block;background:#0a5a2d;color:#fff;text-align:center;padding:10px;border-radius:30px;text-decoration:none;font-weight:800;margin-bottom:10px">💬 WhatsApp Direct</a>
+<div class="search">🔍<input placeholder="Rechercher : Riz 50kg, Huile, Tomates, Bazin... à Madina"></div>
 
-<input class="search" placeholder="🔍 Rechercher : Riz 50kg, Huile, Tomates, Bazin... à Madina">
+<!-- TA NOUVELLE MODIF LANGUE LOCALE + VOCALE -->
+<div class="langbox">
+<b>🌍 Langue / Langa - Fala vocal</b>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+<button onclick="setL('fr')" id="lf" class="lang-btn active">FR</button>
+<button onclick="setL('susu')" id="ls" class="lang-btn">Susu</button>
+<button onclick="setL('malinke')" id="lm" class="lang-btn">Malinké</button>
+<button onclick="setL('pular')" id="lp" class="lang-btn">Pular</button>
+</div>
+<h3 id="pn" style="text-align:center;margin:12px 0 0">Sac de riz 50kg</h3>
+<p style="text-align:center;margin:0;font-size:12px;color:#0a4d26;font-weight:800" id="pt">SUSU : Malé bèki 50kg | MALINKÉ: Malo boro 50kg | PULAR : Sac marron 50kg</p>
+<button class="vocal" onclick="vocal()">🎙️ Écouter : Malé bèki 50kg</button>
+</div>
 
-<div class="hero">
 <div class="green">
-<h2>👥 Groupes d'achat - Plus on est nombreux, plus on économise !</h2>
-<p style="margin:10px 0;font-size:13px;color:#e8f5e9">Créez ou rejoignez un groupe d'achat avec les habitants de votre quartier.</p>
+<h2 style="margin:0">👥 Groupes d'achat</h2>
+<b>Plus on est nombreux, plus on économise !</b><br>
+<small>Créez ou rejoignez un groupe d'achat avec les habitants de votre quartier.</small>
 <div class="whitebox">
-<div style="background:#ffda33;display:inline-block;padding:3px 10px;border-radius:20px;font-weight:900;font-size:11px">Exemple :</div>
-<div style="display:flex;gap:10px;margin-top:8px">
-<img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300" style="width:90px;height:90px;border-radius:10px;object-fit:cover">
-<div style="font-size:13px"><b>10 sacs de riz (50 kg)</b><br>→ 10 personnes du même quartier<br>
-<div style="display:flex;gap:6px;align-items:center;margin-top:6px"><div style="background:#0a5a2d;color:#ffda33;padding:4px 10px;border-radius:10px;font-weight:900">-10%</div><small>de réduction + commission</small></div>
-</div></div>
+<b style="background:#ffeb3b;padding:3px 8px;border-radius:12px;font-size:11px">Exemple :</b>
+<div style="display:flex;gap:10px;margin-top:8px"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=200" style="width:90px;height:90px;border-radius:12px">
+<div><b style="font-size:12px">10 sacs de riz (50 kg)</b><br><small>→ 10 personnes du même quartier</small><br><b style="background:#0a331d;color:#c6ff6a;padding:4px 8px;border-radius:6px">-10%</b> <small>de réduction</small><br><small style="background:#0a331d;color:#fff;padding:4px 8px;border-radius:12px;margin-top:4px;display:inline-block">👥 Ensemble, on achète mieux !</small></div></div>
+</div>
+<div style="background:#fff;border-radius:16px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;padding:8px;margin-top:10px;color:#111;text-align:center">
+<div><b style="font-size:10px">Prix réduits</b><br><span style="font-size:9px">sur les gros achats</span></div>
+<div><b style="font-size:10px">Solidarité</b><br><span style="font-size:9px">entre voisins</span></div>
+<div><b style="font-size:10px">Transaction</b><br><span style="font-size:9px">sécurisée</span></div>
+<div><b style="font-size:10px">Commissions</b><br><span style="font-size:9px">pour les groupes</span></div>
 </div>
 </div>
 
-<div class="right">
-<h3 style="font-size:15px">🛡️ Vendeurs certifiés par Madina Find</h3>
-<div style="background:#fff;border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center;margin-top:8px;border:1px solid #d0e8d2;font-size:12px">
-<img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=100" style="width:40px;height:40px;border-radius:50%">
-<div><b style="color:#0a5a2d">✅ Vendeur vérifié</b><br>⭐ 4.8/5 (12 avis) ⚡ 5 min</div>
-</div>
-<h4 style="margin-top:12px;font-size:14px">📦 Produits populaires - Prix en GNF</h4>
-<div class="prodgrid">
-<div class="prod"><small>Riz 50 kg</small><br><b>380 000 GNF</b></div>
-<div class="prod"><small>Huile 5 L</small><br><b>150 000 GNF</b></div>
-<div class="prod"><small>Tomates</small><br><b>250 000 GNF</b></div>
-</div>
-</div>
+<div class="card"><b>🛡️ Vendeurs certifiés</b><br><small>180 000 GNF - Sac de riz 50kg - Disponible à Madina</small></div>
+
+<!-- SLOGAN FINAL PARFAIT À LA FIN -->
+<div class="slogan">
+<h2 style="font-size:26px;color:#0a4d26;margin:0;line-height:1.1">Madina Find<br><span style="color:#ff7a00">c'est plus qu'une appli,<br>c'est une communauté !</span></h2>
+<p style="margin:12px 0 0;font-weight:800;color:#132a1d">Le bon produit, au bon prix,<br>au bon endroit !</p>
+<p style="margin:14px 0 0;font-size:12px;color:#666">Contact : <b style="color:#0a4d26">madinafind.gn@gmail.com</b><br>Marché Madina - Conakry, Guinée</p>
 </div>
 
-<!-- EMAIL EN BAS A LA FIN -->
-<div class="footer">
-<h3>📍 Madina Find</h3>
-<p style="margin:8px 0">Le bon produit, au bon prix, au bon endroit !</p>
-<p>📞 624 20 65 87 | <a href="https://wa.me/224624206587?text=Salam%20Madina%20Find%20!" style="color:#22ff88;font-weight:800;text-decoration:none">WhatsApp Direct</a></p>
-<p style="margin-top:8px;font-weight:800">📧 madinafind.gn@gmail.com</p>
-<p style="margin-top:6px;font-size:11px;opacity:.8">© 2024 Madina Find - Tous droits réservés<br>reichygoums-hub.github.io/madina-find</p>
+<div class="nav">
+<div><b>🏠</b><span>Accueil</span></div>
+<div><b>🔍</b><span>Recherche</span></div>
+<div><b>👥</b><span>Groupes</span></div>
+<div><b>🛡️</b><span>Vendeurs</span></div>
+<div><b>👤</b><span>Profil</span></div>
 </div>
-</div>
-<div class="bottom-nav">
-<a class="bnav active" href="#"><span>🏠</span>Accueil</a>
-<a class="bnav" href="#"><span>🔍</span>Recherche</a>
-<a class="bnav" href="#"><span>👥</span>Groupes</a>
-<a class="bnav" href="#"><span>🏪</span>Vendeurs</a>
-<a class="bnav" href="#"><span>👤</span>Profil</a>
-</div>
-<style>
-/* Amelioration du design sur telephone */
-@media (max-width: 600px) {
-  body {
-    font-size: 15px;
-    padding-bottom: 90px;
-    overflow-wrap: break-word;
-  }
 
-  .wrap {
-    padding: 12px;
-  }
-
-  .h {
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .h > div {
-    max-width: 100%;
-  }
-
-  .h svg {
-    width: 58px;
-    height: 58px;
-  }
-
-  .h h1 {
-    font-size: 25px !important;
-    line-height: 1.1 !important;
-  }
-
-  .h > div:last-child {
-    text-align: left !important;
-    width: 100%;
-  }
-
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    padding: 14px;
-  }
-
-  .step {
-    border: 0;
-    padding: 0;
-    font-size: 12px;
-  }
-
-  .ic {
-    width: 34px;
-    height: 34px;
-  }
-
-  .search {
-    width: 100%;
-    min-width: 0;
-    padding: 13px;
-    font-size: 14px;
-  }
-
-  .hero {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
-  }
-
-  .green,
-  .right {
-    min-width: 0;
-    padding: 14px;
-    border-radius: 16px;
-  }
-
-  .green h2 {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .whitebox {
-    padding: 10px;
-  }
-
-  .whitebox img {
-    width: 75px !important;
-    height: 75px !important;
-    flex-shrink: 0;
-  }
-
-  .prodgrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-
-  .prod {
-    padding: 12px 6px;
-    overflow-wrap: anywhere;
-  }
-
-  .footer {
-    padding: 16px 10px;
-    overflow-wrap: anywhere;
-  }
-
-  .bottom-nav {
-    padding: 9px 0 max(9px, env(safe-area-inset-bottom));
-  }
-
-  .bnav {
-    font-size: 11px;
-    gap: 4px;
-  }
-
-  .bnav span {
-    font-size: 19px;
-  }
-
-  a,
-  button,
-  input {
-    -webkit-tap-highlight-color: transparent;
-  }
-}
-</style>
+<script>
+const N={fr:'Sac de riz 50kg',susu:'Malé bèki 50kg',malinke:'Malo boro 50kg',pular:'Sac marron 50kg'};
+let cur='fr';
+function setL(l){cur=l;document.getElementById('pn').innerText=N[l];document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.getElementById({fr:'lf',susu:'ls',malinke:'lm',pular:'lp'}[l]).classList.add('active');}
+function vocal(){let u=new SpeechSynthesisUtterance(N[cur]);speechSynthesis.speak(u);}
+</script>
 
 </body>
-  </html>
+                                                                                   </html>
