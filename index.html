@@ -1,125 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Madina Find</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madina Find - Trouvez Comparez Achetez au Marché Madina</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,system-ui;background:#f6fbf7;color:#0a2e1f;padding-bottom:90px}
-.wrap{max-width:1250px;margin:auto;padding:14px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:10px 0;background:#fff;border-radius:16px;padding:12px}
-.top-left{display:flex;gap:12px;align-items:center}.top-left img{width:170px}
-.top-right{display:flex;gap:12px;align-items:center;max-width:400px}
-.app-icon{width:82px;height:82px;background:linear-gradient(180deg,#0e7a3a,#0a4a2d);border-radius:18px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;flex-shrink:0}
-.steps{margin:14px 0;background:#eef6ee;border:1px solid #c8e6c9;border-radius:16px;padding:10px;display:flex;justify-content:space-between;gap:6px}
-.step{flex:1;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;border-right:1px solid #d0e0d0;padding-right:4px}.step:last-child{border:none}
-.ic{width:34px;height:34px;background:#0a4a2d;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
-.search{width:100%;padding:14px;border-radius:12px;border:2px solid #0a5a2d;margin:12px 0;font-size:15px}
-.hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:14px}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.top{flex-direction:column;align-items:flex-start}}
-.green{background:linear-gradient(180deg,#0e7a3a,#0a4a2d);border-radius:20px;padding:16px;color:#fff}
-.whitebox{background:#fff;border-radius:16px;padding:12px;color:#111;border:3px solid #ffda33;margin-top:12px}
-.right{background:#f0f8f1;border:1px solid #d0e8d2;border-radius:20px;padding:14px}
-.prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.prod{background:#fff;border-radius:10px;padding:8px;text-align:center;font-size:12px;border:1px solid #e0e0e0}
-.slogan-final{background:#fff;border:3px solid #0a5a2d;border-radius:20px;padding:22px;text-align:center;margin:18px 0}
-.footer{background:linear-gradient(90deg,#0a3d23,#0d6a33);color:#fff;padding:18px;border-radius:18px;text-align:center;margin-top:10px}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:6px 0;z-index:100}
-.bnav{flex:1;text-align:center;text-decoration:none;color:#888;font-size:11px;font-weight:600;display:flex;flex-direction:column;align-items:center}.bnav.active{color:#0a5a2d}
+  body{font-family:system-ui, -apple-system, sans-serif; margin:0; background:#f8faf8; color:#1a3a2a;}
+  header{background:white; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 10px rgba(0,0,0,0.06); position:sticky; top:0; z-index:10;}
+  .logo-block{display:flex; align-items:center; gap:10px;}
+  .logo-block img{width:56px; height:56px; border-radius:14px; object-fit:cover; box-shadow:0 4px 12px rgba(10,90,46,0.25);}
+  .brand h1{margin:0; font-size:22px; line-height:1; color:#0a3d21; font-weight:800;}
+  .brand h1 span{color:#ff7a00;}
+  .brand p{margin:2px 0 0 0; font-size:11px; color:#2e6b4a; font-weight:600;}
+  .hero{background:white; margin:12px; border-radius:18px; padding:16px; display:flex; gap:12px; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+  .hero img{width:64px; height:64px; border-radius:16px;}
+  .hero h2{margin:0; font-size:16px;}
+  .hero h2 span{color:#ff7a00;}
+  .hero p{margin:4px 0 0 0; font-size:13px; color:#555;}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<div class="top">
-<div class="top-left">
-<div style="font-size:42px;font-weight:900;line-height:.9"><span style="color:#0a5a2d">M</span><span style="color:#0a2e1f">adina</span><br><span style="color:#ff7a00">Find</span></div>
-<div><div style="font-weight:800;color:#0a2e1f;font-size:18px">Madina Find</div><small style="color:#0a5a2d;font-weight:700">Trouvez • Comparez • Achetez<br>au Marché Madina</small></div>
-</div>
-<div class="top-right">
-<div class="app-icon">M<br><span style="font-size:11px">Madina<br><span style="color:#ffda33">Find</span></span></div>
-<div>
-<h3 style="font-size:17px;color:#0a2e1f;line-height:1.2">Le marché Madina<br><span style="color:#ff7a00">à portée de main !</span></h3>
-<p style="font-size:13px;margin-top:3px">Des produits, des prix,<br>des vendeurs de confiance.</p>
-</div>
-</div>
-</div>
-
-<div class="steps">
-<div class="step"><div class="ic">🔍</div><div>Recherchez<br><small>un produit</small></div></div>
-<div class="step"><div class="ic">🏷️</div><div>Comparez<br><small>les prix</small></div></div>
-<div class="step"><div class="ic">📍</div><div>Trouvez<br><small>le vendeur et son emplacement</small></div></div>
-<div class="step"><div class="ic">🛡️</div><div>Achetez<br><small>en toute confiance</small></div></div>
-</div>
-
-<input class="search" placeholder="🔍 Rechercher : Riz 50kg, Huile, Tomates, Bazin... à Madina">
+<header>
+  <div class="logo-block">
+    <img src="logo.jpg" alt="Madina Find Logo">
+    <div class="brand">
+      <h1>Madina <span>Find</span></h1>
+      <p>Madina Find<br>Trouvez • Comparez • Achetez<br>au Marché Madina</p>
+    </div>
+  </div>
+</header>
 
 <div class="hero">
-<div class="green">
-<h2>👥 Groupes d'achat</h2>
-<p style="font-size:15px;font-weight:700;margin:4px 0">Plus on est nombreux, plus on économise !</p>
-<p style="font-size:13px;color:#e8f5e9">Créez ou rejoignez un groupe d'achat avec les habitants de votre quartier.</p>
-<div class="whitebox">
-<div style="background:#ffda33;display:inline-block;padding:3px 10px;border-radius:20px;font-weight:900;font-size:11px">Exemple :</div>
-<div style="display:flex;gap:10px;margin-top:8px">
-<img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300" style="width:90px;height:90px;border-radius:10px;object-fit:cover">
-<div style="font-size:13px"><b>10 sacs de riz (50 kg)</b><br>→ 10 personnes du même quartier<br>
-<div style="display:flex;gap:6px;margin-top:6px;align-items:center"><div style="background:#0a5a2d;color:#ffda33;padding:4px 10px;border-radius:10px;font-weight:900">-10%</div><small><b>de réduction</b><br>+ commission pour le groupe</small></div>
-<div style="margin-top:8px;background:#0a5a2d;color:#fff;padding:6px 12px;border-radius:20px;display:inline-flex;gap:6px;align-items:center;font-size:12px;font-weight:700">👥 Ensemble, on achète mieux !</div>
-</div>
-</div>
-</div>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;background:#fff;border-radius:12px;padding:10px;color:#0a2e1f;font-size:11px;text-align:center">
-<div>💲<br><b>Prix réduits</b><br>sur les gros achats</div>
-<div>👥<br><b>Solidarité</b><br>entre voisins</div>
-<div>🛡️<br><b>Transaction</b><br>sécurisée</div>
-<div>🪙<br><b>Commissions</b><br>pour les groupes</div>
-</div>
+  <img src="logo.jpg" alt="Logo">
+  <div>
+    <h2>Le marché Madina <span>à portée de main !</span></h2>
+    <p>Des produits, des prix, des vendeurs de confiance.</p>
+  </div>
 </div>
 
-<div class="right">
-<h3>🛡️ Vendeurs certifiés<br><small>par Madina Find</small></h3>
-<p style="font-size:13px;margin-top:6px">Chaque vendeur est vérifié par notre équipe pour vous garantir des transactions sûres et fiables.</p>
-<div style="background:#fff;border-radius:12px;padding:10px;margin-top:10px;border:1px solid #d0e8d2;display:flex;gap:10px;align-items:center;font-size:12px">
-<img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=100" style="width:46px;height:46px;border-radius:50%">
-<div><b style="color:#0a5a2d">✅ Vendeur vérifié par Madina Find</b><br>⭐ 4.8/5 (12 avis) ⚡ Répondre en 5 min</div>
-</div>
-<h4 style="margin-top:16px">📦 Produits populaires - GNF</h4>
-<div class="prodgrid">
-<div class="prod">Riz importé 50kg<br><b>380 000 GNF</b><br><small>📍 Madina Avaria</small></div>
-<div class="prod">Huile d'arachide 5L<br><b>150 000 GNF</b><br><small>📍 Madina Marché</small></div>
-<div class="prod">Tomates fraîches<br><b>250 000 GNF</b><br><small>📍 Madina Légumes</small></div>
-</div>
-<div style="margin-top:14px;background:#0a5a2d;color:#fff;padding:10px;border-radius:12px;text-align:center;font-weight:700">📍 Madina Find - Le bon produit, au bon prix, au bon endroit !</div>
-</div>
-</div>
+<!-- Garde le reste de ton site ici (recherche, groupes d'achat, etc.) -->
+<!-- Ton code de recherche et groupes d'achat que tu avais -->
 
-<!-- SLOGAN PARFAIT À LA FIN - CELUI QUE TU AS ENCERCLÉ -->
-<div class="slogan-final">
-<h2 style="font-size:28px;color:#0a2e1f;line-height:1.2;font-style:italic">
-Madina Find<br>
-<span style="color:#ff7a00">c'est plus qu'une appli,</span><br>
-c'est une communauté !
-</h2>
-<p style="margin-top:10px;font-size:14px;color:#555">Ensemble, on achète mieux, on économise, on grandit.</p>
-</div>
-
-<!-- FOOTER FINAL AVEC EMAIL EN BAS À LA FIN -->
-<div class="footer">
-<h2 style="font-size:20px">🤝 Madina Find, c'est plus qu'une appli, c'est une communauté !</h2>
-<p style="margin:10px 0">Le bon produit, au bon prix, au bon endroit !</p>
-<p>📞 624 20 65 87 | <a href="https://wa.me/224624206587?text=Salam%20Madina%20Find%20!%20Je%20veux%20commander%20depuis%20le%20site" style="color:#22ff88;font-weight:800;text-decoration:none">💬 WhatsApp Direct</a></p>
-<p style="margin-top:8px;font-weight:900;font-size:16px">📧 madinafind.gn@gmail.com</p>
-<p style="font-size:11px;opacity:.8;margin-top:8px">© 2024 Madina Find - Tous droits réservés</p>
-</div>
-
-</div>
-
-<div class="bottom-nav">
-<a class="bnav active" href="#"><span>🏠</span>Accueil</a>
-<a class="bnav" href="#"><span>🔍</span>Recherche</a>
-<a class="bnav" href="#"><span>👥</span>Groupes</a>
-<a class="bnav" href="#"><span>🏪</span>Vendeurs</a>
-<a class="bnav" href="#"><span>👤</span>Profil</a>
-</div>
 </body>
-  </html>
+</html>
